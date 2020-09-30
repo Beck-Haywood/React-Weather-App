@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Weather from "./Weather";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+/**
+ * This example illustrates a simple react project
+ * that works with an external API.
+ *
+ * Take note of the comments they point common
+ * problems you will need to solve with React.
+ *
+ * There are two ideas here
+ * - Input/Controlled Component Pattern
+ * - Conditionally Rendering components
+ *
+ * The project has an input field where a user will
+ * input a zip code. It finds weather data for that
+ * zip and displays it in a component.
+ *
+ * */
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Weather/>
+      </div>
+    );
+  }
 }
 
 export default App;
